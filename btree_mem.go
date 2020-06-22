@@ -24,7 +24,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/google/btree"
+	btree "github.com/nagamocha3000/btree/pkg/googlebtree"
 	"github.com/petar/GoLLRB/llrb"
 )
 
