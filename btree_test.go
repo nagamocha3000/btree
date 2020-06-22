@@ -101,6 +101,12 @@ func TestBTree(t *testing.T) {
 		if max, want := tr.Max(), Item(Int(treeSize-1)); max != want {
 			t.Fatalf("max: want %+v, got %+v", want, max)
 		}
+
+		// test len
+		if gotLen := tr.Len(); gotLen != treeSize {
+			t.Fatalf("Len got %v, want %v", gotLen, treeSize)
+		}
+
 		got := all(tr)
 		want := rang(treeSize)
 		if !reflect.DeepEqual(got, want) {
